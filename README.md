@@ -1,0 +1,2 @@
+# InventoryApp
+Inventory in Codeigniter
