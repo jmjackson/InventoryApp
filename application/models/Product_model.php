@@ -12,6 +12,19 @@ class Product_model extends CI_Model {
 
     }
     
+    public function getproducts()
+    {
+        $this->db->order_by('sku', 'asc');
+        return $this->db->get('productos')->result();
+        
+    }
+    public function getstock()
+    {
+        $this->db->order_by('sku', 'asc');
+        $this->db->where('stock >', 0);
+        return $this->db->get('productos')->result();
+        
+    }
     public function insert($datos)
     {
         return $this->db->insert('productos', $datos);
@@ -26,6 +39,13 @@ class Product_model extends CI_Model {
     public function delete(Type $var = null)
     {
         # code...
+    }
+
+    public function getproductbyid($id)
+    {
+        $this->db->where('id', $id);
+        return $this->db->get('productos')->row();
+        
     }
 
     

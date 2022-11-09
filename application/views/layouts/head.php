@@ -32,6 +32,7 @@
     <!-- Libs -->
     <link rel="stylesheet" href="<?= base_url('assets/libs/perfect-scrollbar/perfect-scrollbar.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/libs/flot/flot.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/selectize.bootstrap4.css'); ?>">
 
 </head>
 
@@ -50,9 +51,9 @@
                 <!-- Brand demo (see assets/css/demo/demo.css) -->
                 <div class="app-brand demo">
                     <span class="app-brand-logo demo">
-                        <img src="<?= base_url('assets/images/logo.png');?>" alt="Inventory App" class="img-fluid">
+                        <img src="<?= base_url('assets/images/logo.png'); ?>" alt="Inventory App" class="img-fluid">
                     </span>
-                    <a href="<?=site_url();?>" class="app-brand-text demo sidenav-text font-weight-normal ml-2">IA</a>
+                    <a href="<?= site_url(); ?>" class="app-brand-text demo sidenav-text font-weight-normal ml-2">IA</a>
                     <a href="javascript:" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
                         <i class="ion ion-md-menu align-middle"></i>
                     </a>
@@ -64,7 +65,7 @@
 
                     <!-- Dashboards -->
                     <li class="sidenav-item active">
-                        <a href="<?=site_url();?>" class="sidenav-link">
+                        <a href="<?= site_url(); ?>" class="sidenav-link">
                             <i class="sidenav-icon feather icon-home"></i>
                             <div>Principal</div>
                             <div class="pl-1 ml-auto">
@@ -77,7 +78,7 @@
                     <li class="sidenav-divider mb-1"></li>
                     <li class="sidenav-header small font-weight-semibold">General</li>
                     <li class="sidenav-item">
-                        <a href="<?= site_url('Products/index');?>" class="sidenav-link">
+                        <a href="<?= site_url('Products/index'); ?>" class="sidenav-link">
                             <i class="sidenav-icon feather icon-type"></i>
                             <div>Productos</div>
                         </a>
@@ -85,7 +86,7 @@
 
                     <!-- UI elements -->
                     <li class="sidenav-item">
-                        <a href="<?= site_url('Products/ingresos');?>" class="sidenav-link">
+                        <a href="<?= site_url('Products/ingresos'); ?>" class="sidenav-link">
                             <i class="sidenav-icon feather icon-box"></i>
                             <div>Ingresos</div>
                         </a>
@@ -95,34 +96,34 @@
                     <li class="sidenav-divider mb-1"></li>
                     <li class="sidenav-header small font-weight-semibold">Reportes</li>
                     <li class="sidenav-item">
-                        <a href="<?= site_url('Reports/dia');?>" class="sidenav-link">
+                        <a href="<?= site_url('Reports/dia'); ?>" class="sidenav-link">
                             <i class="sidenav-icon feather icon-clipboard"></i>
                             <div>Reporte Diario</div>
                         </a>
                     </li>
                     <li class="sidenav-item">
-                        <a href="<?= site_url('Reports/semana');?>" class="sidenav-link">
+                        <a href="<?= site_url('Reports/semana'); ?>" class="sidenav-link">
                             <i class="sidenav-icon feather icon-grid"></i>
                             <div>Reporte Semanal</div>
                         </a>
                     </li>
                     <li class="sidenav-item">
-                        <a href="<?= site_url('Reports/mes');?>" class="sidenav-link">
+                        <a href="<?= site_url('Reports/mes'); ?>" class="sidenav-link">
                             <i class="sidenav-icon feather icon-grid"></i>
                             <div>Reporte Mensual</div>
                         </a>
                     </li>
                     <!--  Icons -->
-                    <?php if($this->session->userdata('rol')=='Administrador'):?>
-                    <li class="sidenav-divider mb-1"></li>
-                    <li class="sidenav-item">
-                        <a href="<?= site_url('Users/index');?>" class="sidenav-link">
-                            <i class="sidenav-icon feather icon-users"></i>
-                            <div>Usuarios</div>
-                        </a>
-                    </li>
-                    <?php endif;?>
-                    
+                    <?php if ($this->session->userdata('rol') == 'Administrador') : ?>
+                        <li class="sidenav-divider mb-1"></li>
+                        <li class="sidenav-item">
+                            <a href="<?= site_url('Users/index'); ?>" class="sidenav-link">
+                                <i class="sidenav-icon feather icon-users"></i>
+                                <div>Usuarios</div>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+
                 </ul>
             </div>
             <!-- [ Layout sidenav ] End -->
@@ -134,7 +135,7 @@
                     <!-- Brand demo (see assets/css/demo/demo.css) -->
                     <a href="index.html" class="navbar-brand app-brand demo d-lg-none py-0 mr-4">
                         <span class="app-brand-logo demo">
-                            <img src="<?=base_url('assets/images/logo-dark.png');?>" alt="Inventory App" class="img-fluid">
+                            <img src="<?= base_url('assets/images/logo-dark.png'); ?>" alt="Inventory App" class="img-fluid">
                         </span>
                         <span class="app-brand-text demo font-weight-normal ml-2">IA</span>
                     </a>
@@ -171,14 +172,14 @@
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                                     <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
                                         <img src="assets/img/avatars/1.png" alt class="d-block ui-w-30 rounded-circle">
-                                        <span class="px-1 mr-lg-2 ml-2 ml-lg-0"><?=$this->session->userdata('name');?></span>
+                                        <span class="px-1 mr-lg-2 ml-2 ml-lg-0"><?= $this->session->userdata('name'); ?></span>
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a href="javascript:" class="dropdown-item">
                                         <i class="feather icon-user text-muted"></i> &nbsp; Perfil</a>
                                     <div class="dropdown-divider"></div>
-                                    <a href="<?=base_url('Home/LogOff');?>" class="dropdown-item">
+                                    <a href="<?= base_url('Home/LogOff'); ?>" class="dropdown-item">
                                         <i class="feather icon-power text-danger"></i> &nbsp; Salir</a>
                                 </div>
                             </div>
