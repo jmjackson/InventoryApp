@@ -7,8 +7,11 @@ class Products extends CI_Controller {
     {
         parent::__construct();
         //Load Dependencies
+       
+        if(!$this->session->userdata("login")){
+            redirect(base_url());
+        }
         $this->load->model(array('Product_model'));
-        
     }
 
     // List all your items

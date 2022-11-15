@@ -51,6 +51,9 @@ $(document).ready(function(){
         });   
     });
 
+    $(document).ready(function () {
+        $('#products').DataTable();
+    });
     // $("#Amount").change(function(){
     //     alert("The text has been changed.");
     //   }); 

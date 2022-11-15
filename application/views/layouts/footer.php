@@ -42,6 +42,7 @@
             <script src="<?= base_url('assets/js/analytics.js'); ?>"></script>
             <script src="<?= base_url('assets/js/script.js');?>"></script>
             <script src="<?= base_url('assets/js/selectize.js');?>"></script>
+            <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.js"></script>
             </body>
 
             </html>

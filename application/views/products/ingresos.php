@@ -10,15 +10,10 @@
     </div>
     <div class="container">
         <div class="row justify-content-center">
-            <?php if ($this->session->userdata('rol') == "Administrador") : ?>
-                <div class="col-md-10 d-flex justify-content-end">
-                    <a href="" class="btn btn-sm btn-primary mb-2"><i class="feather icon-plus-square"></i> Ingreso</a>
-                </div>
-            <?php endif; ?>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <table class="table table-sm table-striped small">
+                <table class="table table-sm table-striped small" id="products">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -31,7 +26,17 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        <?php $count=1; foreach($products as $p):?>
+                            <tr>
+                                <td><?= $count++; ?></td>
+                                <td><?= $p->sku;?></td>
+                                <td><?= $p->descripcion;?></td>
+                                <td><?= '$'.$p->precio_cliente;?></td>
+                                <td><?= $p->stock;?></td>
+                                <td><?= $p->precio_compra;?></td>
+                                <td></td>
+                            </tr>
+                        <?php endforeach;?>
                     </tbody>
                 </table>
             </div>

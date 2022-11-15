@@ -24,7 +24,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <table class="table table-sm table-striped small">
+                <table class="table table-sm table-striped small" id="products">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -43,6 +43,7 @@
                                 <td><?=$p->descripcion;?></td>
                                 <td><?= '$'.number_format($p->precio_cliente,2,".",",");?></td>
                                 <td><?=$p->stock;?></td>
+                                <td></td>
                             </tr>
                         <?php endforeach;?>
                     </tbody>

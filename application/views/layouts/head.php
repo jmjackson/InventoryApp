@@ -33,7 +33,8 @@
     <link rel="stylesheet" href="<?= base_url('assets/libs/perfect-scrollbar/perfect-scrollbar.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/libs/flot/flot.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/selectize.bootstrap4.css'); ?>">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css"/>
+ 
 </head>
 
 <body>

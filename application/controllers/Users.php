@@ -9,6 +9,9 @@ class Users extends CI_Controller {
     {
         parent::__construct();
         //Do your magic here
+        if(!$this->session->userdata("login")){
+            redirect(base_url());
+        }
         $this->load->model(array('User_model'));
         
     }
